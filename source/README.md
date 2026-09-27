@@ -10,3 +10,7 @@
 当前 Codex 运行时仍使用根目录的 `spritesheet.webp`。SVG 适合放大检查、再编辑、改色和制作更高分辨率导出；修改 SVG 后，需要重新导出符合 Codex Pet v2 合约的 WebP 图集。
 
 追踪脚本位于 [`tools/build_vector_master.py`](../tools/build_vector_master.py)，依赖 Pillow 和 Potrace。
+
+## 验证
+
+母版已用 librsvg 渲染回 `1536×2288` PNG 进行检查，渲染器成功解析全部路径。SVG 不包含 `<image>` 元素，包含 1709 个路径和 73 个已使用动画单元格；渲染结果的尺寸、轮廓布局与运行版图集一致。

@@ -63,6 +63,7 @@ def main() -> None:
                 silhouette, ink = cell_paths(cell, temp, f"r{row}-f{frame}")
                 paths = [f'<path fill="#fff" fill-rule="evenodd" d="{escape(d)}"/>' for d in silhouette]
                 paths += [f'<path fill="#000" fill-rule="evenodd" d="{escape(d)}"/>' for d in ink]
+                paths = ['<g transform="translate(0 208) scale(0.1 -0.1)">' + ''.join(paths) + '</g>']
                 groups.append(
                     f'<g id="row-{row}-frame-{frame}" transform="translate({x} {y})">'
                     + "".join(paths)
