@@ -21,6 +21,7 @@
 - `spritesheet.webp`：`1536×2288` 的 8×11 v2 精灵图，基于 `192×208` 单元格
 - `assets/contact-sheet-extended.png`：完整图集预览
 - `assets/look-directions.png`：中性姿态与 16 个方向预览
+- `source/moyu-angel-maid-master.svg`：可放大、可再编辑的矢量母版
 - `CHANGELOG.md`：版本记录
 
 ## 安装
@@ -33,6 +34,10 @@ cp pet.json spritesheet.webp ~/.codex/pets/moyu-angel-maid/
 ```
 
 目录中需要同时保留 `pet.json` 与 `spritesheet.webp`。重新启动或刷新 Codex 后即可使用。
+
+## 矢量母版
+
+`source/moyu-angel-maid-master.svg` 是从最终清晰版图集追踪得到的真实 SVG 路径母版，包含白色轮廓层和黑色墨线层，不嵌入原始位图。它用于放大检查、再编辑和未来导出；当前 Codex 运行时仍加载根目录的 `spritesheet.webp`。详见 [`source/README.md`](source/README.md)。
 
 ## 资源约束
 
